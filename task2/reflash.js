@@ -1,17 +1,17 @@
-const originalAlert = alert;
-const originalConfirm = confirm;
-const originalPrompt = prompt;
+const ORIGINAL_ALERT = alert;
+const ORIGINAL_CONFIRM = confirm;
+const ORIGINAL_PROMPT = prompt;
 
 alert = function () {
-  originalConfirm('Alert calls confirm');
+  ORIGINAL_CONFIRM('Alert calls confirm');
 };
 
 confirm = function () {
-  originalPrompt('Confirm calls prompt');
+  ORIGINAL_PROMPT('Confirm calls prompt');
 };
 
 prompt = function () {
-  originalAlert('Prompt calls alert');
+  ORIGINAL_ALERT('Prompt calls alert');
 };
 
 alert();
